@@ -129,19 +129,57 @@
     font-weight: 600;
     cursor: default;
   }
+
+  #nav-menu {
+    list-style: none;
+    display: flex;
+    background: var(--bg-oxford-red);
+    margin: 0 2rem;
+  }
+
   #nav-menu a {
     font-size: 1.7rem;
     color: var(--text-color);
     margin-left: 3rem;
+
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+
   } 
+  #nav-menu a::after {
+    content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: rgb(38, 0, 252);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+
+  } 
+  #nav-menu  a:hover::after,
+a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+#nav-menu a {
+	overflow: hidden;
+}
+
+#nav-menu  a::after {
+	opacity:1;
+	transform: translate3d(-100%, 0, 0);
+}
+
+#nav-menu a:hover::after,
+#nav-menu a:focus::after{
+	transform: translate3d(0, 0, 0);
+}
   
   
-  #nav-menu {
-    list-style: none;
-    display: flex;
-   
-    background: var(--bg-oxford-red);
-  }
+
   #nav-menu a:hover,
   #nav-menu a.active {
     color:var(--bg-carolina-red)
@@ -164,6 +202,11 @@
     width: 380px;
     height: 450px;
     animation: floatImage 4s ease-in-out infinite;
+    
+  }
+  .home-img{
+    border-radius: 20px;
+   
   }
   @keyframes floatImage {
     0% {
@@ -190,6 +233,7 @@
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
+
   }
   
   .social-media a{
@@ -260,8 +304,7 @@
   
     /*-----------------------------------*\
       #ABOUT SECTION
-    \*-----------------------------------*/
-     
+    \*-----------------------------------*/  
     #about {
       text-align: center;
       justify-content: center;
@@ -278,14 +321,18 @@
     .about-content h3 {
       text-align: left;
       line-height: 1.2;
+      color: gainsboro;
     }
     .about-content h3 {
       font-size: 2.6rem;
+      color: gainsboro;
     }
     .about-content p {
       font-size: 1.6rem;
       margin: 2rem 0 3rem;
       text-align: left;
+      font-family:monospace;
+      color: gainsboro;
     }
     
     
@@ -543,7 +590,7 @@
   /*--------------------------------------------------------------------github--------------------------------------------------------------------*/ 
   .stats{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
   }
   #github-stats {
@@ -708,6 +755,11 @@
     }
     .calender {
   margin: 20px;
+  margin: auto;
+    }
+    .stats img{
+      margin-top: 10px;
+      width: 33%;
     }
   
     @media (min-width: 575px) {

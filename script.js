@@ -82,3 +82,13 @@ const typed = new Typed('.multiple-text', {
   backdelay: 1000,
   loop: true
 })
+
+
+let stats = document.getElementById("github-top-langs").addEventListener("click", statsfun)
+
+function statsfun(){
+  window.open(
+    "https://github.com/mdasriya",
+    "_blank"
+  );
+}
