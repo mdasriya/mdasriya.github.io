@@ -9,10 +9,10 @@ menuIcon.onclick = () => {
 };
 
 // *=============================== github calender ==================================
-    GitHubCalendar(".calendar", "0avinashmohandev1");
+    // GitHubCalendar(".calendar", "mdasriya");
 
-    // or enable responsive functionality:
-    GitHubCalendar(".calendar", "0avinashmohandev1", { responsive: true });
+    // // or enable responsive functionality:
+    // GitHubCalendar(".calendar", "mdasriya", { responsive: true });
 
 // *=============================== resume opening in a new tab ==================================
 
@@ -92,3 +92,19 @@ function statsfun(){
     "_blank"
   );
 }
+
+
+
+
+
+GitHubCalendar(".calendar", "mdasriya");
+
+// or enable responsive functionality:
+GitHubCalendar(".calendar", "mdasriya", { responsive: true });
+
+// Use a proxy
+GitHubCalendar(".calendar", "mdasriya", {
+   proxy (username) {
+     return fetch(`https://your-proxy.com/github?user=${username}`)
+   }
+}).then(r => r.text())

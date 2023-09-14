@@ -401,6 +401,7 @@ a:focus::after {
       grid-template-columns: repeat(2,1fr);
       align-items: center;
       gap: 2.5rem;
+      cursor: pointer;
     }
     
     .project-container .project-card {
@@ -415,9 +416,9 @@ a:focus::after {
       width: 100%;
       transition: .5s ease;
     }
-    .project-card:hover img {
+    /* .project-card:hover img {
       transform: scale(1.1);
-    }
+    } */
     
     .project-card .project-layer {
       position: absolute;
@@ -435,7 +436,7 @@ a:focus::after {
       transform: translate(100%);
       transition: .5s ease;
     }
-    .project-card:hover .project-layer {
+    .project-card .project-layer {
       transform: translateY(0);
     }
     
@@ -559,8 +560,6 @@ a:focus::after {
     margin-bottom: 20px;
   }
   
-  
-  
   .project-link {
     text-align: center;
     outline: 0;
@@ -644,6 +643,9 @@ a:focus::after {
   /* ======== BREAKPOINTS */
   
     @media (max-width: 1200px) {
+      .calenderimg img{
+        width: 100%;
+      }
       html {
         font-size: 55%;
   
@@ -682,6 +684,9 @@ a:focus::after {
   
     }
     @media (max-width: 768px) {
+      .calenderimg img{
+        width: 100%;
+      }
       #menu-icon {
         display: block;
       }
@@ -738,6 +743,9 @@ a:focus::after {
       html {
         font-size: 50%;
       }
+      .calenderimg img{
+        width: 100%;
+      }
   .contact form .input-box input {
     width: 100%;
   }
@@ -745,6 +753,9 @@ a:focus::after {
     @media (max-width: 365px){
       .home-img img {
         width: 90vw;
+      }
+      .calenderimg img{
+        width: 100%;
       }
       .footer {
         flex-direction: column-reverse;
@@ -765,7 +776,9 @@ a:focus::after {
   
     @media (min-width: 575px) {
       .home { position: relative; }
-  
+      .calenderimg img{
+        width: 100%;
+      }
       .hero-bg {
         display: block;
         position: absolute;
@@ -783,4 +796,10 @@ a:focus::after {
       }
       .shape-2 { left: 60px; }
   
+    }
+
+    /* git hub calender */
+
+    .calenderimg img{
+      width: 100%;
     }
